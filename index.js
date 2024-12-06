@@ -9,6 +9,11 @@ app.use(express.json());
 app.use(express.urlencoded({extended: false}));
 app.use('/', todoRouter);
 
+// Test endpoint
+app.get('/test', (req, res) => {
+  res.send('Hello from backend');
+});
+
 const port = process.env.PORT;
 
 
